@@ -14,8 +14,7 @@
 
 const HDWalletProvider = require('truffle-hdwallet-provider')
 
-const infuraRinkeby = 'https://rinkeby.infura.io/'
-const mnemonic = 'lesson vanish employ control whisper fix capital peace across pupil void like'
+const mnemonic = 'tooth talk neck expect program taxi shallow train forward distance dragon craft'
 
 module.exports = {
   networks: {
@@ -24,9 +23,9 @@ module.exports = {
       port: 8545,
       network_id: '*', // Match any network id
     },
-    rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, infuraRinkeby, 0),
-      network_id: 1,
+    testnet: {
+      provider: () => new HDWalletProvider(mnemonic, 'http://testnet.dexon.org:8545', 0),
+      network_id: '*',
     },
   },
 }
