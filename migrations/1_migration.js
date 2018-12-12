@@ -1,4 +1,3 @@
 /* global artifacts */
-const contract = artifacts.require('./PlayerBook.sol')
-
-module.exports = async deployer => deployer.deploy(contract)
+const HelloDexonRand = artifacts.require('./HelloDexonRand.sol')
+module.exports = deployer => deployer.deploy(HelloDexonRand)
