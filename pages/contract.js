@@ -55,6 +55,7 @@ const ContractPage = ({ walletAddress }) => (
         skip={!walletAddress}
       >
         {({ loading, error, data }) => {
+          if (!walletAddress) return null
           if (loading || !data || !data.wallet) return <Loader />
           if (error) return `Error! ${error.message}`
           const { wallet } = data
